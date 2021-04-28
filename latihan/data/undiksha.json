@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "4c13ff2f-0994-4712-903e-04e067ae0fda",
+		"name": "DC Undiksha Sandbox",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "DC - Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "devuser",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "hdejsdki",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://datacenter.undiksha.ac.id/sandbox/api/login",
+					"protocol": "https",
+					"host": [
+						"datacenter",
+						"undiksha",
+						"ac",
+						"id"
+					],
+					"path": [
+						"sandbox",
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DC - Biosdata",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "$2y$10$RAfwoaq5kd5zZUAxVX4ZCel3GtOwa1YYZm2MCtDz8NNnvRm6oDvsC",
+						"type": "text"
+					},
+					{
+						"key": "model",
+						"value": "jumlah_alumni",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://datacenter.undiksha.ac.id/sandbox/api/biosdata",
+					"protocol": "https",
+					"host": [
+						"datacenter",
+						"undiksha",
+						"ac",
+						"id"
+					],
+					"path": [
+						"sandbox",
+						"api",
+						"biosdata"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
